@@ -6,8 +6,8 @@ on:
 
 jobs:
   my_test_job:
-    runs_on: ubuntu-lates
+    runs-on: ubuntu-latest
 
     steps:
     - name: echo
-    run: echo "priem, priem"
+      run: echo "priem, priem"
