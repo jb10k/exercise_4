@@ -1,0 +1,13 @@
+name: testing
+
+on:
+  push:
+    branches: main
+
+jobs:
+  my_test_job:
+    runs_on: ubuntu-lates
+
+    steps:
+    - name: echo
+    run: echo "priem, priem"
