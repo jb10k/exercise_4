@@ -1,24 +1,26 @@
+name: create topic
+
 on:
   push:
     branches: main
 
-    jobs:
-      create_topic:
-        runs-on: ubuntu-latest
+jobs:
+  create_topic:
+    runs-on: ubuntu-latest
 
-        steps:
-          - name: Checkout code
-            uses: actions/checkout@v2
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-          - name: Create new topic branch
-            run: git checkout -b new-topic
+      - name: Create new topic branch
+        run: git checkout -b new-topic
 
-          - name: Add and commit changes
-            run: |
-              git add .
-              git commit -m "New topic"
+      - name: Add and commit changes
+        run: |
+          git add .
+          git commit -m "New topic"
 
-          - name: Push new topic branch
-            run: git push origin new-topic
-            env:
-              GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Push new topic branch
+        run: git push origin new-topic
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
