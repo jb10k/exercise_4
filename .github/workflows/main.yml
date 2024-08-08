@@ -11,6 +11,9 @@ jobs:
     steps:
     - name: echo
       uses: spicyparrot/kafka-kraft-action@v1.0.6
+      with:
+        node-version: '20.x'
+      
       
     - name: Create Kafka Topic
       run: bin/kafka-topics.sh --create --topic my_topic --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
