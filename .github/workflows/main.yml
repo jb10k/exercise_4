@@ -9,10 +9,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: echo
-      uses: spicyparrot/kafka-kraft-action@v1.0.6
+    - name: install kafka
+      uses: bbcCorp/kafka-actions@v1
       with:
-        node-version: 20
+        kafka version: latest
+        zookeeper version: latest
+        kafka port: 9092
+        zookeeper port: 2181
       
       
     - name: Create Kafka Topic
