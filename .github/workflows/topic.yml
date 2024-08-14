@@ -2,7 +2,7 @@ name: create topic
 
 on:
   push:
-    branches: main
+    branches: 
 
 jobs:
   create_topic:
