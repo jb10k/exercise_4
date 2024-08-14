@@ -1,8 +1,8 @@
 name: create topic
 
-on:
-  push:
-    branches: 
+#on:
+#  push:
+#    branches: main
 
 jobs:
   create_topic:
