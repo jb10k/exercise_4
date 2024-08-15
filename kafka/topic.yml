@@ -1,0 +1,10 @@
+---
+-
+  become: true
+  hosts: kafka1
+  become_method: sudo
+  become_user: root
+  tasks:
+    - command: /opt/kafka/bin/kafka-topics.sh --create --topic critical_topic  --bootstrap-server 192.168.0.24:9092 --config retention.ms=3600000
+    - command: /opt/kafka/bin/kafka-topics.sh --create --topic medium_topic  --bootstrap-server 192.168.0.24:9092 --config retention.ms=86400000
+    - command: /opt/kafka/bin/kafka-topics.sh --create --topic low_topic --bootstrap-server 192.168.0.24:9092

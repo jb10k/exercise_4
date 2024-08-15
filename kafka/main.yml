@@ -1,0 +1,15 @@
+---
+- name: Add Hosts
+  import_playbook: add-hosts.yml
+
+- name: Install kafka
+  import_playbook: install-zookeeper-kafka.yml
+
+- name: Install zookeeper
+  import_playbook: zookeeper.yml
+
+- name: Install kafka cluster
+  import_playbook: kafka-cluster.yml
+
+- name: Create topic
+  import_playbook: topic.yml

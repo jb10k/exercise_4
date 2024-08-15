@@ -1,0 +1,15 @@
+---
+-
+  become: true
+  hosts: all
+  become_method: sudo
+  become_user: root
+  tasks:
+  - name: Add host /etc/hosts
+    copy:
+      dest: "/etc/hosts"
+      content: |
+        127.0.0.1 localhost
+        192.168.0.24 cluster1
+        192.168.0.25 cluster2
+        192.168.0.26 cluster3
