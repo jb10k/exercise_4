@@ -1,0 +1,11 @@
+topics:
+  my-test-topic:
+    partitions: 3
+    replication: 3
+    configs:
+      cleanup.policy: compact, delete
+      max.message.bytes: 128000
+      retention.ms: 604800000
+      retention.bytes: -1
+      segment.bytes: 1073741824
+      segment.ms: 604800000
