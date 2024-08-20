@@ -34,6 +34,8 @@
         zookeeper.connection.timeout.ms=18000
         group.initial.rebalance.delay.ms=0
         auto.leader.rebalance.enable=true
+        allow.everyone.if.no.acl.found=true
+        authorizer.class.name=kafka.security.authorizer.AclAuthorizer
 
   - name: Creating /etc/systemd/system/kafka.service
     copy:
